@@ -38,7 +38,7 @@ void graphwindowTSP::on_pushButton_clicked()
         counter++;
     }
 
-    ui->plainTextEdit->appendPlainText("Solutions was generated successfully !");
+    ui->plainTextEdit->appendPlainText("The solutions was generated successfully !");
     QString e;
     ui->plainTextEdit->appendPlainText("Way: " + QString::number(algorithms->getMinSolution()));
     for(auto i : algorithms->getEgdeSet()){
@@ -72,7 +72,7 @@ void graphwindowTSP::on_pushButton_3_clicked()
         ui->plainTextEdit->clear();
         printBT("","",algorithms->getSolutionTree());
     }else{
-        QMessageBox::warning(this, "Warning!", "First click TSP button !", QMessageBox::Ok);
+        QMessageBox::warning(this, "Warning!", "First click the TSP button !", QMessageBox::Ok);
     }
 }
 
@@ -213,6 +213,6 @@ void graphwindowTSP::on_pushButton_4_clicked()
         getConnection(algorithms->getSortedMatrix()[0].second, u)->setShortestWayMade(true);
         scene->update();
     }else{
-        QMessageBox::warning(this, "Warning!", "Too many vertexes for factorial complexity!", QMessageBox::Ok);
+        QMessageBox::warning(this, "Warning!", "Too many vertexes for the factorial complexity!", QMessageBox::Ok);
     }
 }
