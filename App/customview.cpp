@@ -4,8 +4,3 @@ CustomView::CustomView(MainWindow *w, MyScene*s, QWidget *parent): QGraphicsView
 {
 
 }
-
-
-
-
-

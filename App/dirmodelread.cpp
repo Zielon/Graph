@@ -26,7 +26,8 @@ DirModelRead::~DirModelRead()
     delete ui;
 }
 
-// Read dialog with retriveFromXmlFile method from serialization object
+// Read dialog with the retriveFromXmlFile method from the serialization object
+//
 void DirModelRead::on_pushButton_clicked()
 {
     QModelIndex index = ui->treeView->currentIndex();

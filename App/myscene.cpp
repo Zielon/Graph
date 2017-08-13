@@ -4,7 +4,7 @@
 #include <QWidgetAction>
 #include <QLineEdit>
 
-//Factory object to produce vertex and egdes on scene
+//The Factory object to produce a vertex and egdes on scene
 //
 MyScene::MyScene(QWidget *parent, MainWindow* w, QGraphicsView*v): QGraphicsScene(parent), window(w), view(v)
 {
@@ -13,7 +13,7 @@ MyScene::MyScene(QWidget *parent, MainWindow* w, QGraphicsView*v): QGraphicsScen
     mousePressed = false;
 }
 
-//Add to scene and hash table vertex. Slot for menu
+//Add to the scene and hash table vertex. Slot for menu
 //
 void MyScene::addVetrex()
 {
@@ -25,7 +25,7 @@ void MyScene::addVetrex()
     addItem(v);
 }
 
-//Function which is creating temporary line during making connection between vertexes
+//The Function creates a temporary line during making connection between vertexes
 //In the end temporary line is deleteing from scene
 //
 void MyScene::makeConnection(QString id)
@@ -115,7 +115,7 @@ void MyScene::updateVertexesCoords()
     }
 }
 
-//Update edges and vertex count on windows view in MainWindow object
+//Updates the edges and the vertex count on windows view in MainWindow object
 //
 void MyScene::updateCounter(bool s)
 {
@@ -129,7 +129,7 @@ void MyScene::updateCounter(bool s)
     }
 }
 
-//Deleting vertex with all of connections in neighbours list
+//Deleting the vertex with all of connections in neighbours list
 //
 void MyScene::deleteVertex()
 {
@@ -155,7 +155,7 @@ void MyScene::deleteVertex()
     update();
 }
 
-//If making connection state is set on true allows to make connection between vertexes,
+//If making connection state is set on true, allow to make connection between vertexes,
 //Create ConnectionWay object which is an edge between them
 //
 void MyScene::mousePressEvent(QGraphicsSceneMouseEvent *event)

@@ -58,15 +58,15 @@ private:
     //Custom model for disable first column in table
     //
     class Table : public QStandardItemModel{
-        public:
-            Table(int row, int col, QObject *parent = 0): QStandardItemModel(row, col, parent){}
-            Qt::ItemFlags flags ( const QModelIndex & index ) const
-            {
-              if (index.column() == 0)
-                  return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
-              else
-                  return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable;
-            }
+    public:
+        Table(int row, int col, QObject *parent = 0): QStandardItemModel(row, col, parent){}
+        Qt::ItemFlags flags ( const QModelIndex & index ) const
+        {
+            if (index.column() == 0)
+                return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
+            else
+                return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable;
+        }
     };
 };
 

@@ -1,7 +1,7 @@
 #include "connectionway.h"
 #include <QVariant>
 
-//Constructor which takes 3 arguments as pair from and to with weight between them
+//The constructor which takes 3 arguments as a pair from and to with a weight between them
 //
 ConnectionWay::ConnectionWay(QPair<QPointF, Vertex*> from, QPair<QPointF, Vertex*> to, int w) : vertexFrom(from), vertexTo(to), weight(w)
 {
@@ -30,7 +30,7 @@ QRectF ConnectionWay::boundingRect() const
     return QRectF(0, 0, 50, 50);
 }
 
-//Paint function which changes color depends on bool flag
+//The paint function which changes color depended on the bool flag
 //
 void ConnectionWay::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
@@ -38,7 +38,7 @@ void ConnectionWay::paint(QPainter *painter, const QStyleOptionGraphicsItem *opt
     QPen pen(Qt::gray);
     pen.setWidth(1);
     if(SelectedForConnection){
-       pen.setColor(Qt::red);
+        pen.setColor(Qt::red);
     }
     if(shortestWayMade){
         pen.setColor(Qt::blue);
@@ -59,7 +59,7 @@ void ConnectionWay::paint(QPainter *painter, const QStyleOptionGraphicsItem *opt
 
 }
 
-//Function is responsible for item change during moving vertex on scene, connection cant by broken
+//The function is responsible for the item change during moving vertex on the scene, the connection cant by broken
 //
 QVariant ConnectionWay::itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &val)
 {
@@ -121,12 +121,12 @@ QPair<QPointF, Vertex *> ConnectionWay::getVertexTo()
 
 void ConnectionWay::swapConnections()
 {
-    QPair<QPointF, Vertex*> temp = vertexFrom;
-    vertexFrom = vertexTo;
-    vertexTo = temp;
+    QPair<QPointF, Vertex*> temp = vertexFrom; vertexFrom = vertexTo; vertexTo
+            = temp;
 }
 
-// Function to check if two connections are equal, it is used in serialization object
+// The Function to check if two connections are equal, it is used in the serialization object
+//
 bool ConnectionWay::isCoordsAreEqual(ConnectionWay *conn)
 {
     int xFrom = conn->getVertexFrom().first.x();

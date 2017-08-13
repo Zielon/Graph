@@ -52,7 +52,6 @@ protected:
 private:
     int getWeight(QPointF);
 
-
 private:
     QPointF coords;
     QHash<QString, Vertex*> vertexHashTable;

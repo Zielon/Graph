@@ -3,8 +3,8 @@
 #include "serializatorxml.h"
 #include <QMessageBox>
 
-// Dialog window which is using QDirModel to navigate between files
-
+// The dialog window which is used in QDirModel to navigate between the files
+//
 DirModelSave::DirModelSave(MyScene* s, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::DirModelSave), scene(s)

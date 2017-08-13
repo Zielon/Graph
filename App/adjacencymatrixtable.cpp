@@ -10,7 +10,7 @@ AdjacencyMatrixTable::AdjacencyMatrixTable(MyScene*s, QWidget *parent) :
     GraphAplorithms *algorithms = new GraphAplorithms(scene);
     model = new QStandardItemModel(algorithms->getAdjacencyMatrix().count(),algorithms->getAdjacencyMatrix().count(),this);
     int p = 0;
-    this->setWindowTitle("Adjacency Matrix Table");
+    this->setWindowTitle("The Adjacency Matrix Table");
     for(auto c : algorithms->getSortedMatrix())
     {
         model->setHorizontalHeaderItem(p, new QStandardItem(c.first));

@@ -2,7 +2,7 @@
 
 #include <QtXml/QDomElement>
 
-//Object to serialize to xml file
+//The Object to serialize to xml a file
 //
 SerializatorXML::SerializatorXML(MyScene* s): scene(s){}
 

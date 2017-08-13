@@ -24,7 +24,7 @@ class MyScene;
 class Vertex;
 class ConnectionWay : public QGraphicsItem
 {
-   // Q_OBJECT
+    // Q_OBJECT
 public:
     ConnectionWay(QPair<QPointF, Vertex*>, QPair<QPointF, Vertex*>, int);
     ConnectionWay(ConnectionWay *old, QPair<QPointF, Vertex*> from, QPair<QPointF, Vertex*> to);

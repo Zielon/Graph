@@ -315,7 +315,7 @@ QVector<QVector<QPair<int, Vertex *> > > TSPAlgorithm::cutEdgeFromVertex(QVector
                 if(endOrElementOfCycle(i) == "1"){                                  // i początkiem cyklu
                     for(auto j : fwd){                                              //iteruj po kolejnych elementach
                         if(j != i && endOrElementOfCycle(j) == "1"){                //znajdź koniec cyklu
-                                                                                    // j koniec cyklu
+                            // j koniec cyklu
                             for(auto k : i->getConnectionVector()){                 //sprawdź czy sąsiadują ze sobą
 
                                 Vertex *iNeighbours = scene->getHashTable()[k.second];

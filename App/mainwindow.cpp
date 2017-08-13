@@ -17,10 +17,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     scene = new MyScene(parent, this, ui->graphicsView);
     ui->graphicsView->setScene(scene);
 
-   // CustomView *view = new CustomView(this, scene, this);
-   // view->setGeometry(QRect(35, 35, 900, 500));
-   // view->setScene(scene);
-   //view->show();
+    // CustomView *view = new CustomView(this, scene, this);
+    // view->setGeometry(QRect(35, 35, 900, 500));
+    // view->setScene(scene);
+    //view->show();
 }
 
 MainWindow::~MainWindow()

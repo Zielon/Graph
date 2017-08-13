@@ -41,19 +41,12 @@ public:
 
 private slots:
     void on_actionMenu_triggered();
-
     void on_actionZapisz_triggered();
-
     void on_actionOdczytaj_triggered();
-
     void on_pushButton_clicked();
-
     void on_actionBellman_ford_triggered();
-
     void on_actionAdjacency_Matrix_triggered();
-
     void on_actionTSP_triggered();
-
     void on_actionEuler_Cycle_triggered();
 
 private:

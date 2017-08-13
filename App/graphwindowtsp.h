@@ -23,26 +23,23 @@ public:
     void createVector(Tree*t);
     void showMatrix(Tree*t);
     ConnectionWay* getConnection(Vertex *from, Vertex *to);
+
 private slots:
     void on_pushButton_clicked();
-
     void on_pushButton_2_clicked();
-
     void on_pushButton_3_clicked();
-
     void on_comboBox_activated();
-
     void on_pushButton_4_clicked();
 
 private:
     Ui::graphwindowTSP *ui;
-        MyScene* scene;
-        GraphAplorithms *algorithms;
-        QString cr, cl, cp;
-        bool clicked;
-        QVector<QVector<ConnectionWay*> > vectorOfConnections;
-        QVector<ConnectionWay*> vectorTemp;
-        QVector<Tree*> solutionVector;
+    MyScene* scene;
+    GraphAplorithms *algorithms;
+    QString cr, cl, cp;
+    bool clicked;
+    QVector<QVector<ConnectionWay*> > vectorOfConnections;
+    QVector<ConnectionWay*> vectorTemp;
+    QVector<Tree*> solutionVector;
 };
 
 #endif // GRAPHWINDOWTSP_H

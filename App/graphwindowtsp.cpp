@@ -12,13 +12,9 @@ graphwindowTSP::graphwindowTSP(MyScene*s ,QWidget *parent) :
     ui->setupUi(this);
     algorithms = new GraphAplorithms(scene);
     this->setWindowTitle("Travelling salesman problem");
-
     cr = "┌─";
-
     cl = "└─";
-
     cp = "│ ";
-
     clicked = false;
 }
 

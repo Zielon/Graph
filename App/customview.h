@@ -33,19 +33,19 @@ class CustomView : public QGraphicsView
 {
     Q_OBJECT
 public:
-        explicit CustomView(MainWindow*, MyScene*, QWidget *parent);
+    explicit CustomView(MainWindow*, MyScene*, QWidget *parent);
 
 signals:
 
 public slots:
-         //void mousePressEvent(QMouseEvent * event);
-        // void mouseReleaseEvent(QMouseEvent * event);
-        // void mouseDoubleClickEvent(QMouseEvent * event);
-        // void mouseMoveEvent(QMouseEvent * event);
-       // void contextMenuEvent(QContextMenuEvent * event);
+    //void mousePressEvent(QMouseEvent * event);
+    // void mouseReleaseEvent(QMouseEvent * event);
+    // void mouseDoubleClickEvent(QMouseEvent * event);
+    // void mouseMoveEvent(QMouseEvent * event);
+    // void contextMenuEvent(QContextMenuEvent * event);
 private:
-        MainWindow *window;
-        MyScene *myScene;
+    MainWindow *window;
+    MyScene *myScene;
 };
 
 #endif // CUSTOMVIEW_H

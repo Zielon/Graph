@@ -45,8 +45,8 @@ void Vertex::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     pen.setColor(QColor(Qt::red));
     QBrush brush(Qt::red);
     if(selected){
-       // pen.setColor(Qt::blue);
-         brush.setColor(Qt::red);
+        // pen.setColor(Qt::blue);
+        brush.setColor(Qt::red);
     }else{
         brush.setColor(Qt::gray);
         //pen.setColor(Qt::black);
@@ -163,13 +163,3 @@ void Vertex::restoreVertexID()
     numberID = vertexID;
     update();
 }
-
-
-
-
-
-
-
-
-
-

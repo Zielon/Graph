@@ -7,7 +7,7 @@
 #include "euleralgorithm.h"
 #include "newtspalgorithm.h"
 
-//Class with every graph algorithm used in this application
+//The class with the every graph algorithm used in this application
 //
 int GraphAplorithms::GINFINITY = 999999999;
 
@@ -21,12 +21,13 @@ GraphAplorithms::GraphAplorithms(MyScene* s): scene(s)
         sortedMartix.append(pair);
     }
     qSort(sortedMartix.begin(), sortedMartix.end(), [](QPair<QString, Vertex*> &a, QPair<QString, Vertex*> &b){
-                                                             if (a.first.toInt() < b.first.toInt()) return true;
-                                                        });
+        if (a.first.toInt() < b.first.toInt()) return true;
+    });
     createMatrix();
 }
 
 //Travelling salesman problem
+//
 void GraphAplorithms::tspAlgorithm()
 {
     tspalgo = new TSPAlgorithm(this, scene);
@@ -74,7 +75,6 @@ void GraphAplorithms::Dijkstra(Vertex *source)
             relax(u, v, i.first->getWeight());
             v->setNumberID(QString::number(v->getWay()));
             scene->update();
-            
         }
     }
 }
@@ -116,6 +116,7 @@ bool GraphAplorithms::BellmanFord(Vertex *source)
 }
 
 //Relax method to estimate and set the shortes way
+//
 void GraphAplorithms::relax(Vertex *u, Vertex *v, int w)
 {
     if(v->getWay() > u->getWay() + w){
@@ -173,7 +174,7 @@ void GraphAplorithms::createMatrix()
 
 }
 
-//Returns pair where first vaule is index in 2D table and the second vaule is weight to this index
+//Returns the pair where the first vaule is index in 2D table and the second vaule is weight to this index
 //
 QPair<int,int> GraphAplorithms::getPairFromHashTable(QString from, QString to)
 {
