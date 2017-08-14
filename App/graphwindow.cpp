@@ -23,6 +23,17 @@ void GraphWindow::on_pushButton_clicked()
 {
     QString source = ui->lineEdit->text();
     QString destination = ui->lineEdit_2->text();
+
+    bool isSource = Q_NULLPTR;
+    bool isDestination = Q_NULLPTR;
+    source.toInt(&isSource); destination.toInt(&isDestination);
+
+    if(!isSource || !isDestination) {
+        ui->plainTextEdit->appendPlainText("Provide the correct vertexs number !");
+        return;
+    }
+    else ui->plainTextEdit->clear();
+
     GraphAplorithms *algorithms = new GraphAplorithms(scene);
     algorithms->Dijkstra(scene->getHashTable()[source]);
     const QString s = algorithms->printShortestPath(scene->getHashTable()[source], scene->getHashTable()[destination]);

@@ -1,7 +1,6 @@
 #include "grapheulerwindow.h"
 #include "ui_grapheulerwindow.h"
 
-
 graphEulerwindow::graphEulerwindow(MyScene* s, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::graphEulerwindow), scene(s)

@@ -22,6 +22,16 @@ void GraphWindowBellmanFord::on_pushButton_9_clicked()
     QString source = ui->lineEdit_9->text();
     QString destination = ui->lineEdit_10->text();
 
+    bool isSource = Q_NULLPTR;
+    bool isDestination = Q_NULLPTR;
+    source.toInt(&isSource); destination.toInt(&isDestination);
+
+    if(!isSource || !isDestination) {
+        ui->plainTextEdit_5->appendPlainText("Provide the correct vertexs number !");
+        return;
+    }
+    else ui->plainTextEdit_5->clear();
+
     GraphAplorithms *algorithms = new GraphAplorithms(scene);
     if(algorithms->BellmanFord(scene->getHashTable()[source])){
         const QString s = algorithms->printShortestPath(scene->getHashTable()[source], scene->getHashTable()[destination]);
