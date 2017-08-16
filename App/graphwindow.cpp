@@ -28,7 +28,7 @@ void GraphWindow::on_pushButton_clicked()
     bool isDestination = Q_NULLPTR;
     source.toInt(&isSource); destination.toInt(&isDestination);
 
-    if(!isSource || !isDestination) {
+    if(!isSource || !isDestination || !scene->getHashTable().contains(source) || !scene->getHashTable().contains(destination)) {
         ui->plainTextEdit->appendPlainText("Provide the correct vertexs number !");
         return;
     }

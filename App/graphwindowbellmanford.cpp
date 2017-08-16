@@ -26,7 +26,7 @@ void GraphWindowBellmanFord::on_pushButton_9_clicked()
     bool isDestination = Q_NULLPTR;
     source.toInt(&isSource); destination.toInt(&isDestination);
 
-    if(!isSource || !isDestination) {
+    if(!isSource || !isDestination || !scene->getHashTable().contains(source) || !scene->getHashTable().contains(destination)) {
         ui->plainTextEdit_5->appendPlainText("Provide the correct vertexs number !");
         return;
     }

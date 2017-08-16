@@ -31,17 +31,17 @@ void graphEulerwindow::printEdges(QString a, QString b)
 
 void graphEulerwindow::on_pushButton_clicked()
 {
-    QString startVertex = ui->lineEdit->text();
+    QString source = ui->lineEdit->text();
     bool isNumber = Q_NULLPTR;
-    startVertex.toInt(&isNumber);
+    source.toInt(&isNumber);
 
-    if(startVertex.isEmpty() || !isNumber) {
+    if(source.isEmpty() || !isNumber || !scene->getHashTable().contains(source)) {
         ui->plainTextEdit->appendPlainText("Provide the correct start vertex number !");
         return;
     }
     else ui->plainTextEdit->clear();
 
-    flag = algorithms->euler(startVertex);
+    flag = algorithms->euler(source);
     s = algorithms->getStack();
     if(flag){
         QString vertex;

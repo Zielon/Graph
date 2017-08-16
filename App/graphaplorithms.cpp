@@ -295,7 +295,7 @@ QString GraphAplorithms::printShortestPath(Vertex *source, Vertex *destination)
     i.toBack();
     while(i.hasPrevious()){
         Vertex* v = i.previous();
-        output += "Vetex: " + v->getVertexID() + " weight: " + QString::number(v->getWay()) + "\n";
+        output += QString("Vertex: %1 | Weight: %2\n").arg(v->getVertexID(), 3).arg(v->getWay());
     }
     return output;
     scene->update();
