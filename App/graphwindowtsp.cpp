@@ -28,6 +28,7 @@ void graphwindowTSP::on_pushButton_clicked()
     algorithms->tspAlgorithm();
     solutionVector = algorithms->getSolutionVector();
     clicked = true;
+    ui->comboBox->clear();
 
     int counter = 1;
     for(auto i : solutionVector){
